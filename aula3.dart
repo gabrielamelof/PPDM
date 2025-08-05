@@ -58,4 +58,12 @@ void main(){
      print(i);
   }); // faz açoes para cada item da lista
   print(frutas);
+
+  List<int> numeros = [1,3,5];
+  numeros.forEach((int i){
+    i += 1;
+    print(i);
+  });
+
+  print(numeros);
 }
