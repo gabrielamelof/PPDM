@@ -8,7 +8,11 @@ void main(){
 
   Papagaio Piupiu = Papagaio(nome: "piupiu");
 
-  List<String> Animais = ["tot"];
+  List<Animal> Animais = [Toto, Gatinho, Piupiu];
+
+  for (var animal in Animais){
+    animal.falar();
+  }
 
 
 }
@@ -26,6 +30,7 @@ class Animal{
 class Cachorro extends Animal {
   Cachorro({required String nome}):super(nome: nome);
 
+  @override
   void falar(){
     print("AU AU!");
   }
@@ -34,6 +39,7 @@ class Cachorro extends Animal {
 class Gato extends Animal {
   Gato({required String nome}):super(nome: nome);
 
+  @override
   void falar(){
     print("Miau!");
   }
@@ -42,6 +48,7 @@ class Gato extends Animal {
 class Papagaio extends Animal {
   Papagaio({required String nome}):super(nome: nome);
 
+  @override
   void falar(){
     print("Piu Piu!");
   }
